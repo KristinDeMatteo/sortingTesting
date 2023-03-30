@@ -16,3 +16,18 @@ void selectionSort(T list[], int size) {
         }
     }
 }
+
+template <typename T>
+void bubbleSort(T list[], int size) {
+    bool swapped = true;
+    int i;
+    while (swapped) {
+        swapped = false;
+        for (i = 0; i < size - 1; i++) {
+            if (list[i + 1] < list[i]) {
+                swap(list[i + 1], list[i]);
+                swapped = true;
+            }
+        }
+    }
+}
