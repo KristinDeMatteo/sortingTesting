@@ -77,7 +77,8 @@ int main() {
   testAscendingSort();
   testDescendingSort();
   testEmptySort();
-  testAsmBubbleSort();
+  testSelectionSort();
+
   cout << "All tests passed!\n";
   return 0;
 }
