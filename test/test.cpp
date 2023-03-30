@@ -45,11 +45,29 @@ void testEmptySort() {
   }
 }
 
+// Define the test function
+void testAsmBubbleSort() {
+    int arr[] = { 5, 3, 9, 1, 7 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    bubbleSort(arr, n);
+
+    cout << "Sorted array: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    for (int i = 0; i < n - 1; i++) {
+        assert(arr[i] <= arr[i + 1]);
+    }
+}
 
 int main() {
   testAscendingSort();
   testDescendingSort();
   testEmptySort();
+  testAsmBubbleSort();
   cout << "All tests passed!\n";
   return 0;
 }

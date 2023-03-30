@@ -14,5 +14,6 @@
 
 extern "C" void getInput(char* buffer, int inputSize);
 extern "C" void bubbleSort(int arr[], int n);
+extern "C" void asmBubbleSort(int*, int); // Declare the external bubble sort function written in assembly language
 
 #endif /* helper_hpp */
