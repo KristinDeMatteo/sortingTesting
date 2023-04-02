@@ -8,13 +8,20 @@
 #include <iostream>
 #include "helper.hpp"
 
-int main(int arg, const char ** argv) {
-    std::cout << "Starting program.\n";
-    const char* argument = argv[1];
-    char* result = static_cast<char*>(malloc(1000));
-    char* result;
-    bubbleSort(result, argument);
+using namespace std;
 
-
+int main() {
+    string input;
+    vector<int> inputArray;
+    cout << "Starting program.\n";
+    cout << "Input array: " << endl;
+    getline(cin, input);
+    inputArray = stringToNumberArray(input);
+    
+    bubbleSort(inputArray.data(), static_cast<int>(inputArray.size()));
+    cout << "Result: " << endl;
+    for (int num: inputArray){
+        cout << " " << num;
+    }
     return 0;
 }

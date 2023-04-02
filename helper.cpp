@@ -10,19 +10,14 @@
 
 using namespace std;
 
-string getUserInput() {
-  char buffer[100];
-  getInput(buffer, 100);
-  return string(buffer);
+vector<int> stringToNumberArray(const string& input) {
+    vector<int> myArray;
+    stringstream iss(input);
+    
+    int number;
+    while (iss >> number) {
+        myArray.push_back(number);
+    }
+    
+    return myArray;
 }
-
-// // Bubble Sort implementation
-// void bubbleSort(int arr[], int n) {
-//     for (int i = 0; i < n - 1; i++) {
-//         for (int j = 0; j < n - i - 1; j++) {
-//             if (arr[j] > arr[j + 1]) {
-//                 swap(arr[j], arr[j + 1]);
-//             }
-//         }
-//     }
-// }
