@@ -19,8 +19,9 @@
 using namespace std;
 
 vector<int> stringToNumberArray(const string& input);
-extern "C" void getInput(char* buffer, int inputSize);
-extern "C" void bubbleSort(int* arr, int size);
-extern "C" void asmBubbleSort(int*, int); // Declare the external bubble sort function written in assembly language
+void bubbleSort(int* arr, int size);
+// extern "C" void getInput(char* buffer, int inputSize);
+// extern "C" void bubbleSort(int* arr, int size);
+// extern "C" void asmBubbleSort(int*, int); // Declare the external bubble sort function written in assembly language
 
 #endif /* helper_hpp */
