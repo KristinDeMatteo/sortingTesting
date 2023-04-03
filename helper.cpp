@@ -50,6 +50,6 @@ void bubbleSort(int* arr, int size) {
         "jnz outer_loop\n"
     :
     : "r" (arr), "r" (size)
-    : "eax", "ebx", "ecx", "edx", "edi", "esi", "memory", "cc"
+    : "eax", "ebx", "ecx", "edx", "edi", "esi"
     );
 }
